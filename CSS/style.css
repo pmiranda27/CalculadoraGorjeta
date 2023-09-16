@@ -1,0 +1,553 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    user-select: none;
+}
+
+input {
+    border-radius: 10px;
+
+    padding: 0 8px;
+
+    outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+}
+
+body {
+    overflow: hidden;
+
+    background-color: hsl(185, 41%, 84%);
+    
+    font-family: 'Space Mono', monospace;
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 64px;
+}
+
+@media only screen and (min-width: 600px){
+    main {
+        width: 90%;
+        height: 30rem;
+    
+        background-color: hsl(0, 0%, 100%);
+    
+        display: flex;
+        justify-content: center;
+    
+        border: transparent;
+        border-radius: 20px;
+    
+        padding: 16px;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    main {
+        width: 80%;
+        height: 30rem;
+    
+        background-color: hsl(0, 0%, 100%);
+    
+        display: flex;
+        justify-content: center;
+    
+        border: transparent;
+        border-radius: 20px;
+    
+        padding: 16px;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    main {
+        width: 75%;
+        height: 25rem;
+    
+        background-color: hsl(0, 0%, 100%);
+    
+        display: flex;
+        justify-content: center;
+    
+        border: transparent;
+        border-radius: 20px;
+    
+        padding: 16px;
+    }
+}
+
+@media only screen and (min-width: 1920px){
+    main {
+        width: 65%;
+        height: 25rem;
+    
+        background-color: hsl(0, 0%, 100%);
+    
+        display: flex;
+        justify-content: center;
+
+        font-size: 2rem;
+    
+        border: transparent;
+        border-radius: 20px;
+    
+        padding: 16px;
+    }
+}
+
+.ladoEsquerdo {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.ladoDireito {
+    background-color: hsl(183, 100%, 15%);
+
+    border: transparent;
+    border-radius: 20px;
+
+    padding: 8px;
+
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.valorDinheiro {
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+
+    font-weight: 700;
+
+    color: hsl(186, 14%, 43%);
+
+    gap: 8px;
+
+    margin-bottom: 16px
+}
+
+#dinheiro {
+    width: 100%;
+    height: 2.5rem;
+
+    background-color: hsl(185, 41%, 84%);
+
+    border: 2px solid transparent;
+
+    text-align: right;
+
+    font-size: x-large;
+    font-weight: 700;
+    color: hsl(183, 100%, 15%);
+}
+#dinheiro:focus {
+    border: 2px solid hsl(172, 69%, 33%);
+}
+
+.dinheiroDois {
+    position: relative;
+}
+
+#cifrao {
+    position: absolute;
+
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+}
+
+.tipSection {
+    display: flex;
+    flex-direction: column;
+
+    width: 95%;
+}
+#tipTitle {
+    font-weight: 700;
+    color: hsl(186, 14%, 43%);
+
+    margin-bottom: 8px;
+}
+
+.tipButtons {
+    width: 100%;
+}
+
+.tipBtn {
+    background-color: hsl(183, 100%, 15%);
+
+    border: transparent;
+    border-radius: 15px;
+
+    width: 6rem;
+    height: 3rem;
+
+    margin-bottom: 4px;
+
+    font-size: x-large;
+    font-weight: 700;
+
+    color: hsl(0, 0%, 100%);
+
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 1920px){
+    .tipBtn {
+        background-color: hsl(183, 100%, 15%);
+    
+        border: transparent;
+        border-radius: 15px;
+    
+        width: 7.5rem;
+        height: 3rem;
+    
+        margin-bottom: 4px;
+    
+        font-size: x-large;
+        font-weight: 700;
+    
+        color: hsl(0, 0%, 100%);
+    
+        cursor: pointer;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .tipBtn {
+        background-color: hsl(183, 100%, 15%);
+    
+        border: transparent;
+        border-radius: 15px;
+    
+        width: 7rem;
+        height: 3rem;
+    
+        margin-bottom: 4px;
+    
+        font-size: x-large;
+        font-weight: 700;
+    
+        color: hsl(0, 0%, 100%);
+    
+        cursor: pointer;
+    }
+}
+
+.tipBtn:active {
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(185, 43%, 41%);
+}
+.tipBtnSelected {
+    background-color: hsl(172, 67%, 45%);
+
+    border: transparent;
+    border-radius: 15px;
+
+    margin-bottom: 4px;
+
+    color: hsl(183, 100%, 15%);;
+
+    cursor: default;
+}
+
+
+.qntdPessoas {
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+
+    font-weight: 700;
+
+    color: hsl(186, 14%, 43%);
+
+    gap: 8px;
+
+    margin-bottom: 16px
+}
+
+.titleQntdPessoas {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.errorPessoas {
+    color: hsl(0, 67%, 51%);
+
+    font-size: small;
+
+    text-align: right;
+}
+.hidden {
+    display: none;
+}
+
+.qntdPessoasClass {
+    width: 100%;
+    height: 2.5rem;
+
+    background-color: hsl(185, 41%, 84%);
+
+    border: transparent;
+
+    text-align: right;
+
+    font-size: x-large;
+    font-weight: 700;
+    color: hsl(183, 100%, 15%);
+}
+.qntdPessoasClass:focus {
+    border: 2px solid hsl(172, 69%, 33%);
+}
+
+.qntdPessoasClassWrong {
+    width: 100%;
+    height: 2.5rem;
+
+    background-color: hsl(185, 41%, 84%);
+
+    border: 2px solid hsl(0, 67%, 51%);
+
+    text-align: right;
+
+    font-size: x-large;
+    font-weight: 700;
+    color: hsl(183, 100%, 15%);
+}
+.qntdPessoasClassWrong:focus {
+    border: 2px solid hsl(172, 69%, 33%);
+}
+
+.pessoasDois {
+    position: relative;
+}
+
+#pessoinha {
+    position: absolute;
+
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+}
+
+#inputPorcentagem {
+    width: 5.5rem;
+
+    padding: 0 8px;
+
+    background-color: hsl(185, 41%, 84%);
+
+    font-size: x-large;
+    font-weight: 700;
+    color: hsl(183, 100%, 15%);
+    
+    text-align: right;
+    cursor: text;
+}
+#inputPorcentagem:focus {
+    border: 2px solid hsl(172, 69%, 33%);
+}
+
+.lineOne {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    gap: 48px;
+}
+
+.tipAmount {
+    display: flex;
+    flex-direction: column;
+
+    font-weight: 700;
+}
+
+#tipAmnt {
+    color: hsl(0, 0%, 100%);
+}
+#tipAmnt2 {
+    color: hsl(186, 14%, 43%);
+    font-size: small;
+}
+#tipNumber {
+    color: hsl(172, 67%, 45%);
+
+    font-weight: 700;
+    font-size: xx-large;
+}
+
+@media only screen and (min-width: 1024px){
+    .lineOne {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        gap: 32px;
+
+        padding: 0 8px;
+    }
+
+    #tipAmnt {
+        color: hsl(0, 0%, 100%);
+        font-size: 1.25rem;
+    }
+    #tipAmnt2 {
+        color: hsl(186, 14%, 43%);
+        font-size: 1rem;
+    }
+    #tipNumber {
+        color: hsl(172, 67%, 45%);
+    
+        font-weight: 700;
+        font-size: xx-large;
+    }
+}
+
+@media only screen and (min-width: 1919px){
+    #tipAmnt {
+        color: hsl(0, 0%, 100%);
+        font-size: 2.5rem;
+    }
+    #tipAmnt2 {
+        color: hsl(186, 14%, 43%);
+        font-size: 1.5rem;
+    }
+    #tipNumber {
+        color: hsl(172, 67%, 45%);
+    
+        font-weight: 700;
+        font-size: 5rem;
+    }
+}
+
+.lineTwo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    gap: 48px;
+}
+
+.totalAmount {
+    display: flex;
+    flex-direction: column;
+
+    font-weight: 700;
+}
+
+#totalAmnt {
+    color: hsl(0, 0%, 100%);
+}
+#totalAmnt2 {
+    color: hsl(186, 14%, 43%);
+    font-size: small;
+}
+
+#totalNumber {
+    color: hsl(172, 67%, 45%);
+
+    font-weight: 700;
+    font-size: xx-large;
+}
+
+
+
+@media only screen and (min-width: 1024px){
+    #totalAmnt {
+        color: hsl(0, 0%, 100%);
+        font-size: 1.5rem;
+    }
+    #totalAmnt2 {
+        color: hsl(186, 14%, 43%);
+        font-size: 1rem;
+    }
+    
+    #totalNumber {
+        color: hsl(172, 67%, 45%);
+    
+        font-weight: 700;
+        font-size: xx-large;
+    }    
+}
+
+@media only screen and (min-width: 768px){
+    #totalAmnt {
+        color: hsl(0, 0%, 100%);
+        font-size: 1.5rem;
+    }
+    #totalAmnt2 {
+        color: hsl(186, 14%, 43%);
+        font-size: 1rem;
+    }
+    
+    #totalNumber {
+        color: hsl(172, 67%, 45%);
+    
+        font-weight: 700;
+        font-size: xx-large;
+    }    
+}
+
+@media only screen and (min-width: 1919px){
+    #totalAmnt {
+        color: hsl(0, 0%, 100%);
+        font-size: 3rem;
+    }
+    #totalAmnt2 {
+        color: hsl(186, 14%, 43%);
+        font-size: 1.5rem;
+    }
+    
+    #totalNumber {
+        color: hsl(172, 67%, 45%);
+    
+        font-weight: 700;
+        font-size: 4rem;
+    }    
+}
+
+.resetBtnClass {
+    width: 80%;
+    height: 2.5rem;
+
+    background-color: hsl(172, 67%, 45%);
+
+    color: hsl(183, 100%, 15%);
+
+    font-weight: 700;
+    font-size: x-large;
+
+    border: transparent;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+.resetBtnClass:active {
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(185, 43%, 41%);
+}
